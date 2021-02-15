@@ -5,7 +5,6 @@ eg1[0].write_png("eg1.png")
 nxeg1 = networkx.drawing.nx_pydot.from_pydot(eg1[0])
 u1 = networkx.DiGraph.to_undirected(nxeg1)
 cc1=networkx.algorithms.connected_components(u1)
-for c in cc1:
-  print(c)
-
+for i, f in enumerate(cc1, start=1):
+  print("Component %d: %s" % (i, f))
 
